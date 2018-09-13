@@ -16,13 +16,16 @@ func main() {
 	cache.Instance();
 	var str=cache.Set("a","xcvbnm,.cvbnm,./",1);
 	fmt.Println(str)
-	time.Sleep(time.Duration(3)*time.Second)
+	time.Sleep(time.Duration(1)*time.Second)
 	fmt.Println(cache.Get("a"));
 	go cache.Server();
-	time.Sleep(time.Duration(3)*time.Second)
+	time.Sleep(time.Duration(1)*time.Second)
 	go cache.Client();
-	go cache.Client();
-	time.Sleep(time.Duration(15)*time.Second)
+	//go cache.Client();
+	time.Sleep(time.Duration(5)*time.Second)
+
+
+
 	//var a = 1.5
 	//var b = 2
 	//fmt.Println(a,b)
